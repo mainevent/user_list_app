@@ -1,0 +1,40 @@
+<div class="user-details" *ngIf="user">
+  <div class="card mb-3">
+    <h3 class="text-center">{{user.name}}</h3>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item d-flex"><div class="col-3 label">Id:</div><div class="col-9 value">{{user.id}}</div></li>
+      <li class="list-group-item d-flex"><div class="col-3 label">Name:</div><div class="col-9 value">{{user.name}}</div></li>
+      <li class="list-group-item d-flex"><div class="col-3 label">Username:</div><div class="col-9 value">{{user.username}}</div></li>
+      <li class="list-group-item d-flex"><div class="col-3 label">Email:</div><div class="col-9 value">{{user.email}}</div></li>
+      <li class="list-group-item d-flex">
+        <div class="col-3 label">Address:</div>
+        <div class="col-9 align-self-end">
+          <div>{{user.address.street}}</div>
+          <div>{{user.address.suite}}</div>
+          <div>{{user.address.city}}</div>
+          <div>{{user.address.zipcode}}</div>
+        </div>
+      </li>
+      <li class="list-group-item d-flex">
+        <div class="col-3 label">GEO:</div>
+        <div class="col-9">
+          <div>Latitude: {{user.address.geo.lat}}</div>
+          <div>Longitude: {{user.address.geo.lng}}</div>
+        </div>
+      </li>
+      <li class="list-group-item d-flex"><div class="col-3 label">Phone:</div><div class="col-9">{{user.phone}}</div></li>
+      <li class="list-group-item d-flex"><div class="col-3 label">Website:</div><div class="col-9">{{user.website}}</div></li>
+      <li class="list-group-item d-flex">
+        <div class="col-3 label">Company:</div>
+        <div class="col-9 align-self-end">
+          <div>{{user.company.name}}</div>
+          <div>{{user.company.catchPhrase}}</div>
+          <div>{{user.company.bs}}</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="d-flex justify-content-center">
+    <button type="button" class="btn btn-primary" [routerLink]="['/users']">Back</button>
+  </div>
+</div>

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { User, UsersService } from '../../services/users.service';
-import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-list-view',
@@ -10,8 +9,7 @@ import {Router} from '@angular/router';
 export class ListViewComponent implements OnInit {
   usersList: User[];
   constructor(
-    private users: UsersService,
-    private router: Router
+    private users: UsersService
   ) { }
 
   ngOnInit() {

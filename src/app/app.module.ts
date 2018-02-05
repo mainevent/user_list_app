@@ -5,7 +5,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ListViewComponent } from './components/list-view/list-view.component';
-import { AppService } from './app.service';
 import { HttpClientModule } from '@angular/common/http';
 import { UsersService } from './services/users.service';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
